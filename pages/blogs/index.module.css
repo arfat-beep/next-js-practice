@@ -13,6 +13,7 @@
 .blogContainer {
   margin-bottom: 20px;
   display: grid;
+  cursor: pointer;
   grid-template-columns: 10% 90%;
   background-color: #fff;
   box-shadow: 3px 2px 7px 0px #00000030;

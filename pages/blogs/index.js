@@ -16,7 +16,7 @@ const index = ({ data }) => {
       <NavBar />
       <h1 className={styles.heading}>My blogs</h1>
       <div className={styles.blogsContainer}>
-        {data.map((blog) => (
+        {data.slice(0, 5).map((blog) => (
           <div key={blog.id} className={styles.blogContainer}>
             <div className={styles.blogNumber}>
               <div>{blog.id}</div>
