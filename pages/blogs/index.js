@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import NavBar from "../../Components/NavBar";
 import styles from "./index.module.css";
@@ -17,12 +18,14 @@ const index = ({ data }) => {
       <h1 className={styles.heading}>My blogs</h1>
       <div className={styles.blogsContainer}>
         {data.slice(0, 5).map((blog) => (
-          <div key={blog.id} className={styles.blogContainer}>
-            <div className={styles.blogNumber}>
-              <div>{blog.id}</div>
+          <Link key={blog.id} href={`/blogs/${blog.id}`}>
+            <div className={styles.blogContainer}>
+              <div className={styles.blogNumber}>
+                <div>{blog.id}</div>
+              </div>
+              <div className={styles.blogText}>{blog.title}</div>
             </div>
-            <div className={styles.blogText}>{blog.title}</div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
